@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2><center>Student Registration Form</center></h2>
+    <form method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <div class="gender-residential">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="other" required> Other</label>
+        </div>
+
+        <br>
+
+        <div class="gender-residential">
+            <label>Residential Type:</label>
+            <label><input type="checkbox" name="residential-type" value="day-scholar"> Day Scholar</label>
+            <label><input type="checkbox" name="residential-type" value="hosteller"> Hosteller</label>
+        </div>
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="Select">Select</option>
+            <option value="computer-science">Computer Science</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="footer-links">
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
