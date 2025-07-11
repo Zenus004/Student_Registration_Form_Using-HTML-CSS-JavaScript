@@ -3,57 +3,102 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Student Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="form.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <script>
-        var userName = prompt("Please enter your name:");
-        document.write("Good Morning, " + userName + "!");
-    </script>
-    
-    <h2>
-        <center>Student Registration Form</center>
-    </h2>
-    <form id="student-form">
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
 
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
+<div class="container">
+    <div class="greeting" id="greeting"></div>
+    <div class="success-message" id="successMessage"></div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <h2>Student Registration Form</h2>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
+    <div class="form-container">
+        <form id="student-form">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="first-name" required type="text">
+            </div>
 
-        <div class="gender-residential">
-            <label>Gender:</label>
-            <label><input type="radio" name="gender" value="male" required> Male</label>
-            <label><input type="radio" name="gender" value="female" required> Female</label>
-            <label><input type="radio" name="gender" value="other" required> Other</label>
-        </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" name="last-name" required type="text">
+            </div>
 
-        <br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" required type="email">
+            </div>
 
-        <div class="gender-residential">
-            <label>Residential Type:</label>
-            <label><input type="checkbox" name="residential-type" value="day-scholar"> Day Scholar</label>
-            <label><input type="checkbox" name="residential-type" value="hosteller"> Hosteller</label>
-        </div>
-        <label for="course">Select Course:</label>
-        <select id="course" name="course" required>
-            <option value="Select">Select</option>
-            <option value="computer-science">Computer Science</option>
-            <option value="Electrical">Electrical</option>
-            <option value="Mechanical">Mechanical</option>
-        </select>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" required type="date">
+            </div>
 
-        <input type="button" value="Submit" onclick="validateAndSubmit()">
-    </form>
+            <div class="form-group">
+                <div class="section-title">Gender</div>
+                <div class="gender-residential">
+                    <div class="option-card">
+                        <label for="male">
+                            <input id="male" name="gender" required type="radio" value="male">
+                            Male
+                        </label>
+                    </div>
+                    <div class="option-card">
+                        <label for="female">
+                            <input id="female" name="gender" required type="radio" value="female">
+                            Female
+                        </label>
+                    </div>
+                    <div class="option-card">
+                        <label for="other">
+                            <input id="other" name="gender" required type="radio" value="other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="section-title">Residential Type</div>
+                <div class="gender-residential">
+                    <div class="option-card">
+                        <label for="day-scholar">
+                            <input id="day-scholar" name="residential-type" type="checkbox" value="day-scholar">
+                            Day Scholar
+                        </label>
+                    </div>
+                    <div class="option-card">
+                        <label for="hosteller">
+                            <input id="hosteller" name="residential-type" type="checkbox" value="hosteller">
+                            Hosteller
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="Select">Select</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                </select>
+            </div>
+
+            <input class="submit-btn" onclick="validateAndSubmit()" type="button" value="Submit Application">
+        </form>
+    </div>
 
     <div class="footer-links">
         <ul>
@@ -62,8 +107,8 @@
             <li><a href="service.html">Our Services</a></li>
         </ul>
     </div>
-
-    <script src="form.js"></script>
+</div>
+<script src="form.js"></script>
 </body>
 
 </html>
